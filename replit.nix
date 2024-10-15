@@ -12,7 +12,10 @@ pkgs.mkShell {
     pkgs.git                  # Git for version control (optional)
     pkgs.libsndfile           # Library for reading and writing sound files
     pkgs.qt5.qtbase           # Qt5 base libraries required by PyQt5
-    pkgs.qt5.qttools          # Qt5 tools required by PyQt5
+    pkgs.qt5.qttools
+    pkgs.gitlab-shell
+    
+    # Qt5 tools required by PyQt5
     # Add any other dependencies you might need
   ];
 
