@@ -10,14 +10,14 @@ pkgs.mkShell {
     pkgs.gnumake              # GNU Make tool required for compiling some packages
     pkgs.pkg-config           # Package configuration helper
     pkgs.git                  # Git for version control (optional)
-    pkgs.libsndfile           # Library for reading and writing files containing sampled sound
+    pkgs.libsndfile           # Library for reading and writing sound files
     pkgs.qt5.qtbase           # Qt5 base libraries required by PyQt5
     pkgs.qt5.qttools          # Qt5 tools required by PyQt5
     # Add any other dependencies you might need
   ];
 
   shellHook = ''
-    echo "Entering the Nix shell environment for Sound-of-life project"
+    echo "Entering the Nix shell environment for the Sound-of-life project"
     # You can add any setup commands here
   '';
 }
