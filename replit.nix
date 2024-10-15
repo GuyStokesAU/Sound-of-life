@@ -1,8 +1,8 @@
 { pkgs ? import <nixpkgs> {} }:
 
-{
-  deps = [
-    pkgs.python311Full        # Ensures Python 3.11 is installed
+pkgs.mkShell {
+  buildInputs = [
+    pkgs.python311Full        # Python 3.11
     pkgs.portaudio            # PortAudio library required by pyo
     pkgs.alsaLib              # ALSA sound library for Linux systems
     pkgs.ffmpeg               # FFmpeg for audio processing and exporting
@@ -10,6 +10,14 @@
     pkgs.gnumake              # GNU Make tool required for compiling some packages
     pkgs.pkg-config           # Package configuration helper
     pkgs.git                  # Git for version control (optional)
+    pkgs.libsndfile           # Library for reading and writing files containing sampled sound
+    pkgs.qt5.qtbase           # Qt5 base libraries required by PyQt5
+    pkgs.qt5.qttools          # Qt5 tools required by PyQt5
     # Add any other dependencies you might need
   ];
+
+  shellHook = ''
+    echo "Entering the Nix shell environment for Sound-of-life project"
+    # You can add any setup commands here
+  '';
 }
