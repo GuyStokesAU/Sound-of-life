@@ -2,7 +2,7 @@
 
 pkgs.mkShell {
   buildInputs = [
-    pkgs.python311Full        # Python 3.11
+    pkgs.python310Full        # Python 3.10
     pkgs.portaudio            # PortAudio library required by pyo
     pkgs.alsaLib              # ALSA sound library for Linux systems
     pkgs.ffmpeg               # FFmpeg for audio processing and exporting
